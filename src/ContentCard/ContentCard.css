@@ -1,0 +1,36 @@
+#card{
+
+    border: 1px solid grey;
+    
+    border-width: 100%;
+    padding: 10px;
+    height: 70px;
+    block-size: fit-content;
+    text-align: center;
+    width: 80%;
+    
+}
+
+ul li{
+    margin-left: 5px;
+}
+
+#cardcontainer{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+#card h3{
+
+    font-size: 15px;
+    color: grey;
+}
+
+#card li{
+
+    font-size: 15px;
+    list-style-type: none;
+    display: inline;
+    padding-right: 20px;
+}

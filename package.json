@@ -21,7 +21,17 @@
     "workbox-range-requests": "^5.1.4",
     "workbox-routing": "^5.1.4",
     "workbox-strategies": "^5.1.4",
-    "workbox-streams": "^5.1.4"
+    "workbox-streams": "^5.1.4",
+    "-": "0.0.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
+    "axios": "^0.24.0",
+    "javascript-time-ago": "^2.3.10",
+    "react-icons": "^4.3.1",
+    "react-router-dom": "^6.2.1",
+    "react-time-ago": "^7.1.4",
+    "select": "^1.1.2"
   },
   "scripts": {
     "start": "react-scripts start",

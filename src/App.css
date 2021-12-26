@@ -1,38 +1,95 @@
-.App {
+
+#search{
+  width: 40%;
+  border-radius: 40px;
+  height: 40px;
+  margin: 20px;
+  
+ 
+}
+#offlinediv{
+  margin-top: 10px;
+  font-size: 20px;
   text-align: center;
+  width: 100%;
+  background-color:#FDF8CB;
+  padding: 10px;
+  color: #BEB778;
+}
+#searchcontainer{
+margin-bottom: 10px;
+margin-top: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::placeholder {
+  font-size: 20px;
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.back-to-top{
+  width: 45px;
+  height: 45px;
+  margin-left: 5px;
+  padding: 5px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#scrollcontainer{
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  
+}
+
+input:not(placeholder-shown) {
+  font-size: 20px;
+  padding-left: 20px;
+  
+}
+
+#hackerimg{
+  width: 60px;
+  height: 60px;
+  margin-right: 5px;
+  
+}
+#hottitle{
+  font-size: 35px;
+  color: rgb(92, 92, 92)
+}
+#searchcontainer{
+  display: flex;
+  
+}
+.spanbuttons{
+  margin-left: 20px;
+}
+.buttons{
+  padding: 10px;
+  border-radius: 5xpx;
+  margin-left: 5px;
+  
+
+}
+#hackcontent{
+  display: flex;
+  margin-right: 150px;
+  margin-left: 50px;
+  padding: 15px;
+}
+
+#imgtextspan{
+  line-height: 0.1;
+}
+
+#imgtextspan p{
+  font-size: 20px;
+}
+
+#navbar{
+  width: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  margin-bottom: 10px;
+  
 }
