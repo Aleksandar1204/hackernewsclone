@@ -1,10 +1,13 @@
 
 import './App.css';
+
 import axios from 'axios';
 import { useState } from 'react';
 import React, { useEffect, useRef } from 'react';
+
 import ContentCard from './ContentCard/ContentCard';
 import HackerNews from './assets/HackerNews.png'
+
 import { AiOutlineArrowUp } from 'react-icons/ai';
 
 
@@ -26,10 +29,8 @@ function App(props) {
     axios.all([
       axios.get('https://hacker-news.firebaseio.com/v0/topstories.json').then(response => {
 
-
         response.data.map(itemId => {
           return axios.get(`https://hacker-news.firebaseio.com/v0/item/${itemId}.json`).then(response => {
-
 
             if (i <= 50) {
 
@@ -45,13 +46,10 @@ function App(props) {
               timeArr[i] = { days, hours, minutes, seconds }
               items[i] = [response.data, timeArr[i]];
 
-
               i++;
+
               if (i === 50) {
-
-
                 setData(items)
-
                 localStorage.setItem("items", JSON.stringify(items));
 
               }
@@ -84,45 +82,34 @@ function App(props) {
   }
 
   function popularitYHandler() {
-
-
     setText(false)
     setFilter(false)
     setPopularity(true)
   }
 
   function textHandler() {
-
     setText(true)
-
     setFilter(false)
     setPopularity(false)
   }
+
   function searchHandler(event) {
     setSearchTerm(event.target.value)
     event.preventDefault();
   }
-  // console.log(filterOption)
+
   var lastHours = [];
 
   data.map(dat => {
     return dat[1].hours <= 24 ? lastHours.push(dat) : null
   })
-  //console.log(arr)
-
 
   if (filterClicked) {
 
-    console.log(filterOption)
-
     lastHours.sort(function (a, b) {
-
       return b[1].hours - a[1].hours;
 
-
-
     })
-
   }
 
   var popularPosts = [];
@@ -136,8 +123,6 @@ function App(props) {
       return b[0].score - a[0].score;
     }
     )
-    //console.log(popularPosts);
-    //popularityClicked =false;
   }
 
   var textPosts = [];
@@ -150,7 +135,7 @@ function App(props) {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth' // for smoothly scrolling
+      behavior: 'smooth'
     });
   };
   return (
@@ -246,7 +231,6 @@ function App(props) {
       <div id="scrollcontainer"><span id="scrollbtntext">Back to top </span><button onClick={scrollToTop} className="back-to-top">
         <AiOutlineArrowUp size={20} />
       </button></div>
-
     </div>
   );
 
